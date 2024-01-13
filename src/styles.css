@@ -1,0 +1,28 @@
+.table-view{
+  -fx-background-color: transparent;
+  -fx-border-color: linear-gradient(to bottom right, #272b3f, #256b51);
+  -fx-border-radius: 8px;
+}
+
+.table view .table-column{
+  -fx-alignment: center;
+}
+
+.table-view .column-header-background{
+  -fx-background-color: linear-gradient(to bottom right, #515880, #256b51);
+  -fx-background-insets: 0 0 0 0;
+  -fx-background-radius: 8px 8px 0px 0px;
+
+}
+
+.table-view .column-header, .filter{
+  -fx-background-color: transparent;
+}
+
+.sidebar{
+  -fx-background-color: linear-gradient(to bottom  right, #2C3E50, #34495E);
+}
+
+.pane{
+  -fx-background-color: #34495E;
+}

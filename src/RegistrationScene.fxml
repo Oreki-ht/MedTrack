@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: rgb(100,100,100);;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RegistrationSceneController">
+   <children>
+      <Accordion layoutX="207.0" layoutY="144.0" />
+      <Label alignment="CENTER" layoutX="81.0" layoutY="107.0" prefHeight="192.0" prefWidth="651.0" text="Pharmacy Login" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="96.0" />
+         </font>
+      </Label>
+      <TextField fx:id="emailInput" layoutX="932.0" layoutY="518.0" prefHeight="40.0" prefWidth="266.0" promptText="Enter Email" />
+      <Button layoutX="979.0" layoutY="632.0" mnemonicParsing="false" onAction="#registerBtnClicked" prefHeight="27.0" prefWidth="173.0" text="Login">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="passwordInput" layoutX="932.0" layoutY="575.0" prefHeight="40.0" prefWidth="266.0" promptText="Enter Password" />
+      <Label alignment="CENTER" layoutX="894.0" layoutY="681.0" prefHeight="27.0" prefWidth="136.0" text="Normal User? " textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Button layoutX="1057.0" layoutY="684.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Enter Homepage" />
+      <Line endX="1073.0" layoutX="207.0" layoutY="107.0" startX="-117.5" stroke="#404040">
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+      </Line>
+      <Pane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: rgb(100,100,100);;">
+         <children>
+            <Accordion layoutX="207.0" layoutY="144.0" />
+            <Label alignment="CENTER" layoutX="81.0" layoutY="136.0" prefHeight="192.0" prefWidth="913.0" text="Pharmacy Registration" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="96.0" />
+               </font>
+            </Label>
+            <TextField fx:id="pPhone" layoutX="932.0" layoutY="518.0" prefHeight="40.0" prefWidth="266.0" promptText="Phone Number" />
+            <Button fx:id="registerBtn" layoutX="979.0" layoutY="632.0" mnemonicParsing="false" onAction="#registerBtnClicked" prefHeight="27.0" prefWidth="173.0" text="Register">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <PasswordField fx:id="pPassword" layoutX="932.0" layoutY="571.0" prefHeight="40.0" prefWidth="266.0" promptText="Create A Password" />
+            <Line endX="1073.0" layoutX="206.0" layoutY="117.0" startX="-117.5" stroke="#404040">
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+            </Line>
+            <TextField fx:id="pLocation" layoutX="933.0" layoutY="465.0" prefHeight="40.0" prefWidth="266.0" promptText="Location (Paste from Google Maps)" />
+            <TextField fx:id="pName" layoutX="932.0" layoutY="366.0" prefHeight="40.0" prefWidth="266.0" promptText="Pharmacy Name" />
+            <Label alignment="CENTER" layoutX="67.0" layoutY="14.0" prefHeight="81.0" prefWidth="447.0" text="MEDTRACK" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Elephant" size="40.0" />
+               </font>
+            </Label>
+            <TextField fx:id="pLicense" layoutX="932.0" layoutY="415.0" prefHeight="40.0" prefWidth="266.0" promptText="License Number" />
+         </children>
+      </Pane>
+   </children>
+</Pane>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InventorySceneController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="143.0">
+         <children>
+            <BorderPane prefHeight="800.0" prefWidth="236.0" styleClass="sidebar" stylesheets="@styles.css">
+               <center>
+                  <Pane id="sidebar" fx:id="sidebar" prefHeight="200.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@styles.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="sAddMedicine" layoutX="15.0" layoutY="303.0" mnemonicParsing="false" onAction="#sidebarAddMedicineClicked" prefHeight="47.0" prefWidth="202.0" style="-fx-background-color: rgba(120,120,120,100);;" text="    Add Medicine">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="16.0" layoutY="367.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="202.0" style="-fx-background-color: rgba(24,144,255,100);" text="  Inventory">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="15.0" layoutY="239.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="202.0" style="-fx-background-color: rgba(120,120,120,100);" text="Dashboard">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <FontAwesomeIconView glyphName="DASHBOARD" layoutX="34.0" layoutY="268.0" size="20" wrappingWidth="23.0">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </FontAwesomeIconView>
+                        <FontAwesomeIconView glyphName="PLUS_CIRCLE" layoutX="37.0" layoutY="332.0" size="20" />
+                        <FontAwesomeIconView glyphName="ALIGN_JUSTIFY" layoutX="37.0" layoutY="397.0" size="20" />
+                        <FontAwesomeIconView glyphName="ANGLE_RIGHT" layoutX="199.0" layoutY="397.0" size="20" />
+                        <Button fx:id="sModify" layoutX="17.0" layoutY="431.0" mnemonicParsing="false" onAction="#sidebarModifyClicked" prefHeight="47.0" prefWidth="202.0" style="-fx-background-color: rgba(120,120,120,100);" text="Sales">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <FontAwesomeIconView glyphName="EDIT" layoutX="35.0" layoutY="465.0" size="25" text="" />
+                        <Button layoutX="17.0" layoutY="496.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="202.0" style="-fx-background-color: rgba(120,120,120,100);" text="Profile">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <FontAwesomeIconView glyphName="USER" layoutX="39.0" layoutY="528.0" size="25" />
+                        <Button fx:id="logoutBtn" layoutX="17.0" layoutY="622.0" mnemonicParsing="false" onAction="#logoutClicked" prefHeight="44.0" prefWidth="200.0" style="-fx-background-color: transparent;" text="Logout" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <FontAwesomeIconView glyphName="SIGN_OUT" layoutX="34.0" layoutY="654.0" size="25" text="" />
+                        <Label fx:id="userLabel" layoutX="44.0" layoutY="148.0" prefHeight="45.0" prefWidth="149.0" text="User" textAlignment="CENTER" textFill="#f5f5f5">
+                           <font>
+                              <Font name="Microsoft Uighur" size="40.0" />
+                           </font>
+                           <padding>
+                              <Insets left="25.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="110.0" prefHeight="45.0" prefWidth="149.0" text="Welcome," textAlignment="CENTER" textFill="#f5f5f5">
+                           <font>
+                              <Font name="Microsoft Uighur" size="40.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="4.0" prefHeight="81.0" prefWidth="230.0" text="MEDTRACK" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Elephant" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </center>
+            </BorderPane>
+            <Pane layoutX="235.0" prefHeight="800.0" prefWidth="1045.0" styleClass="pane" stylesheets="@styles.css">
+               <children>
+                  <AnchorPane layoutX="37.0" layoutY="136.0" prefHeight="558.0" prefWidth="985.0" style="-fx-background-color: rgb(200,200,200);">
+                     <children>
+                        <TableView fx:id="mTable" layoutX="16.0" layoutY="113.0" prefHeight="378.0" prefWidth="953.0" stylesheets="@styles.css">
+                           <columns>
+                              <TableColumn fx:id="tMedCode" prefWidth="140.0" text="Medicine Code" />
+                              <TableColumn fx:id="tMedName" prefWidth="137.0" text="Medicine Name" />
+                              <TableColumn fx:id="tMedBrand" prefWidth="153.0" text="Medicine Brand" />
+                              <TableColumn fx:id="tType" prefWidth="140.0" text="Type" />
+                              <TableColumn fx:id="tExpiry" prefWidth="130.0" text="ExpiryDate" />
+                              <TableColumn fx:id="tQuantity" prefWidth="125.0" text="Quanity" />
+                              <TableColumn fx:id="tPrice" prefWidth="126.0" text="Unit Price" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="22.0" layoutY="27.0" prefHeight="54.0" prefWidth="389.0" text="Search for a specific medicine:">
+                           <font>
+                              <Font name="Times New Roman" size="26.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="searchField" layoutX="352.0" layoutY="34.0" prefHeight="41.0" prefWidth="236.0" promptText="Enter Medicine Code" />
+                        <Button fx:id="searchBtn" layoutX="597.0" layoutY="36.0" mnemonicParsing="false" onAction="#searchBtnClicked" prefHeight="37.0" prefWidth="29.0" style="-fx-background-color: rgba(24,144,255,100);" text="Search" />
+                        <FontAwesomeIconView glyphName="SEARCH" layoutX="605.0" layoutY="59.0" size="14" />
+                        <Button fx:id="invModifyBtn" layoutX="749.0" layoutY="31.0" mnemonicParsing="false" onAction="#invModifyBtnClicked" prefHeight="47.0" prefWidth="202.0" style="-fx-background-color: rgba(24,144,255,100);" text="Modify a Medicine">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children></Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
