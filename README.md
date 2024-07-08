@@ -1,18 +1,17 @@
-## Getting Started
+# MedTrack
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+MedTrack is a desktop-based pharmacy stock management application designed to help pharmacies efficiently manage their inventory. The app allows users to update stock regularly, maintain an updated database of medicines with their information, and keep track of stock amounts.
 
-## Folder Structure
+## Features
 
-The workspace contains two folders by default, where:
+- **Stock Management**: Add, update, and delete medicine stock information.
+- **Medicine Database**: Maintain a comprehensive database of medicines with details such as name, description, and stock amount.
+- **Search Functionality**: Easily search for medicines in the database.
+- **User Authentication**: Secure login for authorized users.
+- **Reporting**: Generate reports on stock levels and other relevant data.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Tech Stack
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- **Frontend**: JavaFX
+- **Backend**: Java
+- **Database**: PostgreSQL
